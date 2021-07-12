@@ -10,8 +10,9 @@ int main(int argc, char const *argv[])
 
 int is_little_endian(void)
 {
-    int32_t i = 1;
+  int32_t i = 1;
 	unsigned char *p = (unsigned char *)&i;
+  printf("%d, %p, %d", i, p, *p);
 	if(*p)
 	{
 		return 1;
