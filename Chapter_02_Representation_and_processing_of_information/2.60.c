@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 unsigned replace_byte(unsigned x, int i, unsigned char b);
 
 int main(int argc, char const *argv[])
