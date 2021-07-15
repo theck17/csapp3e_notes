@@ -11,5 +11,7 @@ int main(int argc, char const *argv[])
 unsigned replace_byte(unsigned x, int i, unsigned char b)
 {
 	int move = i * 8;
+  printf("temp1: %#.8x\n", x & ~(0xff << move));
+  printf("temp2: %#.8x\n", b << move);
 	return x & ~(0xFF << move) | b << move;
 }
