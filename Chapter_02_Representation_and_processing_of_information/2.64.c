@@ -12,5 +12,7 @@ int any_odd_one(unsigned x)
 {
 	unsigned sizeof_unsigned = sizeof(unsigned);
 	unsigned w = sizeof_unsigned << 3;
+  printf("sizeof_unsigned: %d, w: %d", sizeof_unsigned, w);
 	return !!(x << (w-1));
 }
+
