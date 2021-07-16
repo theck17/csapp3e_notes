@@ -30,6 +30,6 @@ int sra(int x, int k)
 	int test = 1 << (w-1-k);
 	test &= xsrl;
 	int mask = ~(test - 1);
-  	/*test为零时，~(test - 1)��全零，不会改变xsrl*/
+  	/*test为零时，~(test - 1)??全零，不会改变xsrl*/
 	return mask | xsrl;
 }

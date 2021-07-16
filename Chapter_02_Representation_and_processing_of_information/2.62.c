@@ -14,11 +14,13 @@ int main(int argc, char const *argv[])
 int int_shifts_are_arithmetic(void)
 {
 	int x = ~0;
+  printf("x = %d\n", x);
 	return x >> 1 == x;
 }
 
 int int_shifts_are_logic(void)
 {
 	unsigned x = ~0;
+ printf("x = %d\n", x); 
 	return x >> 1 == x;
 }
