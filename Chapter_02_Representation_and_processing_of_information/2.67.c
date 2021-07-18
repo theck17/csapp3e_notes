@@ -4,32 +4,38 @@
 
 #include <stdio.h>
 
-int int_size_is_32();
-
-// B
+int int_size_is_32_B();
+int int_size_is_32_C();
 
 int main(int argc, char const *argv[])
 {
-	int_size_is_32();
+	int_size_is_32_B();
+	int_size_is_32_C();
 	return 0;
 }
 
-int int_size_is_32()
+int int_size_is_32_B()
 {
   // B
 	int set_msb = 1 << 31;
 	int beyond_msb = set_msb;
 	beyond_msb <<= 1;
 	int res1 = set_msb && !beyond_msb;
-  printf("A: res1: %d\n", res1);
+  printf("B: res1: %d\n", res1);
+  return res1;
+}
+
+int int_size_is_32_C()
+{
   // C
-  set_msb = 1 << 15;
+  int set_msb = 1 << 15;
 	set_msb <<= 15;
 	set_msb <<= 1;
-	beyond_msb = set_msb;
+	int beyond_msb = set_msb;
 	beyond_msb <<= 1;
 	int res2 = set_msb && !beyond_msb;
-  printf("B: res2: %d\n", res2);
+  printf("C: res2: %d\n", res2);
+  return res2;
 }
 
 
