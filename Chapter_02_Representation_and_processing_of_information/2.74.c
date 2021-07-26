@@ -21,3 +21,4 @@ int tsub_ok(int x, int y)
 	int j = ((x+y) ^ x) >> (w-1);//overflow:FFFFFFFF otherwise:00000000
 	return i || ~j;
 }
+
