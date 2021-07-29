@@ -11,3 +11,6 @@ int main(int argc, char const *argv[])
 	printf("%d\n", (x << 4) - (x << 7));//k=-112
 	return 0;
 }
+
+
+
